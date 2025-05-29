@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
 
-const itemsController = require('../../api/navItems/itemsController');
-const categoriesController = require('../../api/navItems/categoriesController');
+const itemsController = require('../controllers/navItems/itemsController');
+const categoriesController = require('../controllers/navItems/categoriesController');
 
 router.get('/items', itemsController.getNavItems);
 router.get('/items/ref', itemsController.getNavRefs);

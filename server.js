@@ -1,7 +1,14 @@
+const express = require('express');
+
+const routes = require('./api/routes/router');
+
 require('dotenv').config();
-const app = require('./app/app');
 
 const PORT = process.env.PORT;
+const app = express();
+
+app.use(express.json());
+app.use('/', routes);
 
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
