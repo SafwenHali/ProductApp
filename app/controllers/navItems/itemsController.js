@@ -1,4 +1,4 @@
-const { fetchNavItems } = require('../../service/getNavItems')
+const { fetchNavItems } = require('../../services/getNavItems')
 
 exports.getNavItems = async (req, res) => {
   try {
@@ -21,7 +21,7 @@ exports.getNavItemsByRef = async (req, res) => {
   };
 };
 
-exports.getNavRefs = async (req, res) => {
+exports.getNavRefs = async ( res) => {
   try {
     const result = await fetchNavItems();
     const references = result.GetItemsResult.Items.map(i => i["Référence"]);

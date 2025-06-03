@@ -1,4 +1,4 @@
-const { fetchNavItems } = require('../../service/getNavItems')
+const { fetchNavItems } = require('../../services/getNavItems')
 
 exports.getNavCategories = async (req, res) => {
   try {
