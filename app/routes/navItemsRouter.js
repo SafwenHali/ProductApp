@@ -4,6 +4,7 @@ const router = express.Router();
 const itemsController = require('../controllers/navItems/itemsController');
 const categoriesController = require('../controllers/navItems/categoriesController');
 
+
 router.get('/items', itemsController.getNavItems);
 router.get('/items/ref', itemsController.getNavRefs);
 router.get('/items/:ref', itemsController.getNavItemsByRef);
