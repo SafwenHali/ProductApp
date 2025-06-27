@@ -1,0 +1,21 @@
+[
+  { "id": 5, "name": "EQUIPEMENT INDUSTRIEL", "parent_id": null },
+  { "id": 16, "name": "MATERIEL DE SERVICE", "parent_id": 5 },
+  { "id": 18, "name": "OUTILLAGE A HAND", "parent_id": 5 },
+  { "id": 17, "name": "MANUTENTION", "parent_id": 5 },
+
+  { "id": 6, "name": "MATERIEL DE JARDINAGE", "parent_id": null },
+  { "id": 8, "name": "OUTILLAGE", "parent_id": 6 },
+  { "id": 9, "name": "TONDEUSE", "parent_id": 6 },
+  { "id": 10, "name": "MOTOBINEUSE", "parent_id": 6 },
+  { "id": 11, "name": "ATOMISEUR", "parent_id": 6 },
+  { "id": 12, "name": "DEBROUSSAILLEUSE", "parent_id": 6 },
+  { "id": 14, "name": "TRONCONNEUSE", "parent_id": 6 },
+  { "id": 13, "name": "SOUFFLEUR", "parent_id": 6 },
+  { "id": 15, "name": "TAILLE HAIE", "parent_id": 6 },
+
+  { "id": 7, "name": "OUTILLAGE", "parent_id": null },
+  { "id": 20, "name": "OUTILLAGE A MAIN", "parent_id": 7 },
+  { "id": 19, "name": "OUTIL DE COUP", "parent_id": 7 },
+  { "id": 21, "name": "INSTRUMENT DE MESURE", "parent_id": 7 }
+]
