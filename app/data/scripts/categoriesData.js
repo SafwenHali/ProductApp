@@ -1,6 +1,6 @@
 const {postCategoryTemplate } = require('../../templates/postCategoryTemplate')
 const {getNavCategories, getNavSubCategories} = require('../../services/getNavItems')
-const {fetchCategories} = require('../getCategories')
+const {fetchCategories} = require('../../services/getCategories')
 
 const axios = require('axios');
 

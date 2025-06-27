@@ -55,3 +55,10 @@ exports.getNavSubCategories = async (categoryName) => {
 
   return categories[categoryName] || [];
 };
+
+exports.getMarques = async () => {
+  const data = await fetchItems('');
+  const marques = Array.from(new Set(data.GetItemsResult.Items.map(i => i["Marque"])));
+
+  return marques
+};

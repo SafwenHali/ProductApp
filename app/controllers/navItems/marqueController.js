@@ -1,9 +1,8 @@
-const { fetchNavItems } = require('../../services/getNavItems')
+const { getMarques } = require('../../services/getNavItems')
 
 exports.getNavMarques = async (req, res) => {
   try {
-    const result = await fetchNavItems();
-    const marques = Array.from(new Set(result.GetItemsResult.Items.map(i => i["Marque"])));
+    const marques = await getMarques();
 
    res.status(200).json({"Marque" : marques});
  } catch (err) {
