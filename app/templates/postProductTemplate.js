@@ -9,15 +9,15 @@ exports.postProductTemplate =  (product) => {
                 "Sous_Catégorie": "MATERIEL DE SERVICE",
                 "Marque": "VALEX"*/
 
-const reference             = product?.reference             ?? '';
-const name                  = product?.name                  ?? '';
+const reference             = product?.reference             
+const name                  = product?.name                  
 
-const price                 = product?.price                 ?? 0;
-const saleprice             = product?.saleprice             ?? 0;
+const price                 = product?.price                 
+const saleprice             = product?.saleprice             
 
-const category              = product?.category             ?? 0;
-const subcategory           = product?.subcategory           ?? 0;
-const id_manufacturer       = product?.id_manufacturer       ?? 0;
+const category              = product?.category             
+const subcategory           = product?.subcategory           
+const id_manufacturer       = product?.id_manufacturer       
 
 
   const result = `<?xml version="1.0" encoding="UTF-8"?>
@@ -25,13 +25,12 @@ const id_manufacturer       = product?.id_manufacturer       ?? 0;
   <product>
     <id_manufacturer><![CDATA[${id_manufacturer}]]></id_manufacturer>
     <id_supplier><![CDATA[0]]></id_supplier>
-    <id_category_default><![CDATA[2]]></id_category_default>
+    <id_category_default><![CDATA[${category}]]></id_category_default>
     <new><![CDATA[1]]></new>
     <cache_default_attribute><![CDATA[0]]></cache_default_attribute>
     <id_default_image><![CDATA[0]]></id_default_image>
     <id_default_combination><![CDATA[0]]></id_default_combination>
     <id_tax_rules_group><![CDATA[1]]></id_tax_rules_group>
-    <position_in_category><![CDATA[1]]></position_in_category>
     <type><![CDATA[standard]]></type>
     <id_shop_default><![CDATA[1]]></id_shop_default>
     <reference><![CDATA[${reference}]]></reference>
@@ -129,7 +128,7 @@ const id_manufacturer       = product?.id_manufacturer       ?? 0;
 
     <associations>
       <categories>
-        <category>
+      <category>
           <id><![CDATA[${category}]]></id>
         </category>
         <category>

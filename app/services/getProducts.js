@@ -37,20 +37,20 @@ exports.fetchProducts = async () => {
 
 exports.getProductByID = async (id) => {
   try {
-    const response = await axios.get(process.env.GET_Products + process.env.TUNIMATEC_PRESTASHOP_WS_KEY);
+    const response = await axios.get(process.env.GET_Products + '/' + id + process.env.TUNIMATEC_PRESTASHOP_WS_KEY);
     const Items = response.data;
     
     const parser = new XMLParser({ ignoreAttributes: false });
 
     const json = parser.parse(Items);
 
-    const products = json?.prestashop?.product;
+    const product = json?.prestashop?.product;
     
-     if (!products) {
+     if (!product) {
       return { status: 404, message: 'Product not found' };
     }
 
-    return products
+    return product
 
   } catch (err) {
     return { status: 400, message: err.message };

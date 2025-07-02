@@ -21,7 +21,7 @@ exports.getNavItemsByRef = async (req, res) => {
   };
 };
 
-exports.getNavRefs = async ( res) => {
+exports.getNavRefs = async ( req, res) => {
   try {
     const result = await fetchNavItems();
     const references = result.GetItemsResult.Items.map(i => i["Référence"]);
