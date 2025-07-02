@@ -11,6 +11,6 @@ const product = require('./productRouter')
 router.use('/nav',navItems);
 router.use('/product',product);
 
-//router.use('/test',test.addStock);
+//router.use('/test',test.addStock)
 
 module.exports = router;
