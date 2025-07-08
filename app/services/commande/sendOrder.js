@@ -23,7 +23,7 @@ exports.sendOrder = async (cart, contact) => {
     return response.data;
 
   } catch (error) {
-    console.error('Error:', error.response?.status, error.response?.data || error.message);
+    //console.error('Error:', error.response?.status, error.response?.data || error.message);
     return null;
   }
 };
